@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  
+  <title>Admin Dashboard | Electron Studios - Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg-dash: #050505;
+      --card-dash: #121212;
+      --border-dash: #222;
+      --primary: #FF6B00;
+      --secondary: #FF8C38;
+      --glitch: #00D4FF;
+    }
+    body.dash-body {
+      background: var(--bg-dash);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+    }
+    /* NAVBAR */
+    .dash-nav {
+      background: rgba(18,18,18,0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-dash);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .dash-nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .dash-nav-logo span { color: var(--primary); }
+    .nav-actions { display: flex; gap: 15px; }
+    
+    .btn-dash {
+      background: var(--card-dash);
+      border: 1px solid var(--border-dash);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-dash:hover { border-color: var(--primary); color: var(--primary); }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: #fff; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255,107,0,0.3); color: #fff; }
+
+    /* LAYOUT */
+    .dash-container { max-width: 1400px; margin: 0 auto; padding: 40px; }
+    
+    /* STATS ROW */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .stat-card {
+      background: var(--card-dash);
+      border: 1px solid var(--border-dash);
+      border-radius: 12px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--primary);
+    }
+    .stat-val { font-size: 2.5rem; font-weight: 800; font-family: 'Space Grotesk', sans-serif; margin-bottom: 5px; }
+    .stat-label { color: #888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* CONTROLS */
+    .dash-controls {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+    .search-bar {
+      flex: 1;
+      max-width: 400px;
+      position: relative;
+    }
+    .search-bar input {
+      width: 100%;
+      background: var(--card-dash);
+      border: 1px solid var(--border-dash);
+      color: #fff;
+      padding: 12px 20px 12px 40px;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-bar input:focus { border-color: var(--primary); }
+    .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #666; }
+
+    /* GRID */
+    .dash-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 25px;
+    }
+    .sub-card {
+      background: var(--card-dash);
+      border: 1px solid var(--border-dash);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .sub-card:hover {
+      border-color: rgba(255,107,0,0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .sub-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+    .sub-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sub-badge {
+      background: rgba(255,255,255,0.05); color: #ccc;
+      padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; border: 1px solid #333;
+    }
+    .badge-budget { color: #28c864; background: rgba(40,200,100,0.1); border-color: rgba(40,200,100,0.2); }
+    .sub-date { color: #666; font-size: 0.8rem; }
+    
+    .sub-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; margin: 0 0 5px 0; }
+    .sub-email { color: var(--glitch); font-size: 0.95rem; text-decoration: none; margin-bottom: 15px; display: inline-block; }
+    .sub-email:hover { text-decoration: underline; }
+    
+    .sub-message {
+      background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; font-size: 0.9rem;
+      line-height: 1.6; color: #ccc; flex-grow: 1; border: 1px solid #222; margin-bottom: 20px;
+    }
+
+    /* STATUS DROPDOWN */
+    .status-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid var(--border-dash);
+      padding-top: 15px;
+    }
+    .status-label { font-size: 0.85rem; color: #888; }
+    .status-select {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+      outline: none;
+    }
+    .status-select.new { border-color: var(--primary); color: var(--primary); }
+    .status-select.contacted { border-color: #00D4FF; color: #00D4FF; }
+    .status-select.closed { border-color: #28c864; color: #28c864; }
+
+    .loader {
+      text-align: center; padding: 100px 0; color: #666; font-size: 1.2rem;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body class="dash-body">
+
+  <!-- NAVBAR -->
+  <nav class="dash-nav">
+    <a href="/" class="dash-nav-logo">
+      Electron<span>Admin</span>
+    </a>
+    <div class="nav-actions">
+      <button class="btn-dash" onclick="exportCSV()">⬇️ Export CSV</button>
+      <button class="btn-dash btn-primary" onclick="fetchLeads()">🔄 Refresh</button>
+    </div>
+  </nav>
+
+  <div class="dash-container">
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-val" id="statTotal">0</div>
+        <div class="stat-label">Total Leads</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" style="color: var(--glitch)" id="statNew">0</div>
+        <div class="stat-label">New Untouched</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" style="color: #28c864" id="statHigh">0</div>
+        <div class="stat-label">Enterprise Budgets</div>
+      </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="dash-controls">
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search by name, email, or service..." onkeyup="filterLeads()" />
+      </div>
+    </div>
+
+    <!-- GRID -->
+    <div id="submissionsGrid" class="dash-grid">
+      <div class="loader">Loading leads...</div>
+    </div>
+  </div>
+
+  <script>
+    let allLeads = [];
+
+    async function fetchLeads() {
+      const grid = document.getElementById('submissionsGrid');
+      grid.innerHTML = '<div class="loader">Syncing with database...</div>';
+
+      try {
+        const isLocalDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
+        const baseUrl = isLocalDev && window.location.port !== '5000' ? 'http://localhost:5000' : '';
+        const res = await fetch(baseUrl + '/api/submissions');
+        allLeads = await res.json();
+        updateStats();
+        renderLeads(allLeads);
+      } catch (err) {
+        grid.innerHTML = '<div class="loader" style="color:#ff4d4d">Error connecting to server. Is it running?</div>';
+      }
+    }
+
+    function renderLeads(leads) {
+      const grid = document.getElementById('submissionsGrid');
+      grid.innerHTML = '';
+
+      if (leads.length === 0) {
+        grid.innerHTML = '<div class="loader">No leads found.</div>';
+        return;
+      }
+
+      leads.forEach(sub => {
+        const date = new Date(sub.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit' });
+        const service = (sub.service || 'Unknown').toUpperCase();
+        const budget = (sub.budget || 'Unguessed');
+        const status = sub.status || 'new';
+
+        const card = document.createElement('div');
+        card.className = 'sub-card';
+        card.innerHTML = `
+          <div class="sub-header">
+            <div class="sub-tags">
+              <span class="sub-badge">${service}</span>
+              <span class="sub-badge badge-budget">${budget}</span>
+            </div>
+            <span class="sub-date">${date}</span>
+          </div>
+          <h2 class="sub-name">${sub.name}</h2>
+          <div style="margin-bottom: 15px;">
+            <a href="mailto:${sub.email}" class="sub-email" style="margin-bottom: 5px;">${sub.email}</a><br/>
+            <a href="tel:${sub.phone}" class="sub-email" style="color: #bbb;">📞 ${sub.phone || 'N/A'}</a>
+          </div>
+          <div class="sub-message">${sub.message || 'No description provided.'}</div>
+          
+          <div class="status-control">
+            <span class="status-label">Status:</span>
+            <select class="status-select ${status.toLowerCase()}" onchange="updateStatus('${sub.id}', this)">
+              <option value="new" ${status === 'new' ? 'selected' : ''}>🔵 New</option>
+              <option value="contacted" ${status === 'contacted' ? 'selected' : ''}>⚡ Contacted</option>
+              <option value="closed" ${status === 'closed' ? 'selected' : ''}>✅ Closed / Won</option>
+            </select>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    async function updateStatus(id, selectElement) {
+      const newStatus = selectElement.value;
+      // Update styling class based on selection
+      selectElement.className = `status-select ${newStatus}`;
+      
+      try {
+        const isLocalDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
+        const baseUrl = isLocalDev && window.location.port !== '5000' ? 'http://localhost:5000' : '';
+        await fetch(`${baseUrl}/api/submissions/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ status: newStatus })
+        });
+        
+        // Update local object & stats
+        const lead = allLeads.find(l => l.id === id);
+        if(lead) lead.status = newStatus;
+        updateStats();
+
+      } catch (e) {
+        alert('Failed to save status!');
+      }
+    }
+
+    function filterLeads() {
+      const term = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = allLeads.filter(l => 
+        (l.name && l.name.toLowerCase().includes(term)) || 
+        (l.email && l.email.toLowerCase().includes(term)) ||
+        (l.service && l.service.toLowerCase().includes(term))
+      );
+      renderLeads(filtered);
+    }
+
+    function updateStats() {
+      document.getElementById('statTotal').innerText = allLeads.length;
+      document.getElementById('statNew').innerText = allLeads.filter(l => !l.status || l.status === 'new').length;
+      document.getElementById('statHigh').innerText = allLeads.filter(l => l.budget && l.budget.toLowerCase().includes('enterprise')).length;
+    }
+
+    function exportCSV() {
+      if(allLeads.length === 0) return alert('No data to export.');
+      let csv = 'Date,Name,Email,Phone,Service,Budget,Status,Message\n';
+      allLeads.forEach(l => {
+        const msg = (l.message||'').replace(/"/g, '""'); // escape quotes
+        csv += `"${l.date}","${l.name}","${l.email}","${l.phone||''}","${l.service}","${l.budget}","${l.status||'new'}","${msg}"\n`;
+      });
+      
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.setAttribute('href', url);
+      a.setAttribute('download', 'ElectronStudios_Leads.csv');
+      a.click();
+    }
+
+    window.onload = fetchLeads;
+  </script>
+</body>
+</html>

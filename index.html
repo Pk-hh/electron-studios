@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Favicons -->
+  <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Electron Studios | India's Premium Technical Startup & Development Agency</title>
+  <meta name="title" content="Electron Studios | Custom Software & Electronics Development" />
+  <meta name="description" content="Electron Studios is a specialized tech agency delivering complete end-to-end solutions. We build highly scalable Web Apps, Mobile Apps, Custom Embedded Electronics, and IoT Systems." />
+  <meta name="keywords" content="Electron Studios, software agency, IoT solutions india, PCB design firm, mobile app developers, react nextjs experts, esp32 embedded systems, hardware software integration startup, remote tech agency" />
+  <meta name="author" content="Electron Studios" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://electronstudios.online" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://electronstudios.online/" />
+  <meta property="og:title" content="Electron Studios | The Complete Digital & Hardware Agency" />
+  <meta property="og:description" content="We turn hardware ideas into software realities. Get a free consultation for your Web, Mobile, IoT, or Embedded Systems project." />
+  <meta property="og:image" content="https://electronstudios.online/logo.jpg" />
+  <meta property="og:site_name" content="Electron Studios" />
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://electronstudios.online/" />
+  <meta property="twitter:title" content="Electron Studios - Web, Mobile & IoT Development" />
+  <meta property="twitter:description" content="End-to-end product development. From silicon boards to ultra-fast cloud dashboards." />
+  <meta property="twitter:image" content="https://electronstudios.online/logo.jpg" />
+
+  <!-- Theme & PWA -->
+  <meta name="theme-color" content="#FF6B00" />
+  
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhancements.css" />
+  <link rel="stylesheet" href="features.css" />
+  <link rel="stylesheet" href="extras.css" />
+
+  <!-- Structured Data (Schema.org) for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Electron Studios",
+    "image": "https://electronstudios.online/logo.jpg",
+    "url": "https://electronstudios.online",
+    "telephone": "+91-8074605658",
+    "email": "hr@electronstudios.online",
+    "description": "Premium development studio bridging the gap between Software and Electronics. Experts in Web Dev, App Dev, IoT, and Custom Embedded Electronics.",
+    "priceRange": "₹₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Pradeep"
+    },
+    "knowsAbout": [
+      "Web Development",
+      "React Native",
+      "Flutter",
+      "Internet of Things",
+      "Embedded Systems",
+      "PCB Design",
+      "Node.js",
+      "Firebase",
+      "AWS Cloud"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-8074605658",
+      "contactType": "customer service",
+      "email": "hr@electronstudios.online",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== CURSOR ===== -->
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="logo-e">E</span><span class="logo-s">S</span>
+      </div>
+      <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+      <p class="preloader-text">Initializing...</p>
+    </div>
+  </div>
+
+
+  <!-- ===== ANNOUNCEMENT BANNER ===== -->
+  <div class="announce-bar" id="announceBar">
+    <div class="announce-inner">
+      <span class="announce-badge">🔥 Limited Offer</span>
+      <p>Get <strong>20% OFF</strong> your first project this month — use code <strong>ELECTRON2026</strong> at checkout!</p>
+      <a href="#contact" class="announce-cta">Claim Now →</a>
+    </div>
+    <button class="announce-close" id="announceClose" aria-label="Dismiss">✕</button>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">
+          <img src="logo.jpg" alt="Electron Studios Logo" class="logo-img" />
+        </div>
+        <span>Electron <strong>Studios</strong></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
+        <li><a href="#about" class="nav-link" id="navAbout">About</a></li>
+        <li><a href="#services" class="nav-link" id="navServices">Services</a></li>
+        <li><a href="#portfolio" class="nav-link" id="navPortfolio">Portfolio</a></li>
+        <li><a href="#pricing" class="nav-link" id="navPricing">Pricing</a></li>
+        <li><a href="#faq" class="nav-link" id="navFaq">FAQ</a></li>
+        <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
+      </ul>
+      <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <span class="dm-icon dm-sun">☀️</span>
+        <span class="dm-icon dm-moon">🌙</span>
+      </button>
+      <a href="#contact" class="nav-cta" id="navCta">Get a Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="hero-orb orb3"></div>
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge animate-in">
+        <span class="badge-dot"></span>
+        <span>Available for New Projects</span>
+      </div>
+      <h1 class="hero-title animate-in delay-1">
+        We Build<br/>
+        <span class="gradient-text typed-text" id="typedText">Digital Futures</span><span class="typed-cursor-el">|</span><br/>
+        From Circuits to Code
+      </h1>
+      <p class="hero-subtitle animate-in delay-2">
+        A passionate startup crafting custom <strong>websites</strong>, <strong>mobile apps</strong>, 
+        <strong>IoT systems</strong>, and <strong>embedded electronics</strong> for clients who dare to innovate.
+      </p>
+      <div class="hero-actions animate-in delay-3">
+        <a href="#portfolio" class="btn btn-primary" id="heroViewWork">
+          <span>View Our Work</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost" id="heroStartProject">
+          <span>Start a Project</span>
+        </a>
+      </div>
+      <div class="hero-stats animate-in delay-4">
+        <div class="stat">
+          <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Tech Domains</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual animate-in delay-2">
+      <div class="hero-device">
+        <div class="device-screen">
+          <div class="code-line"><span class="c-p">const</span> <span class="c-v">startup</span> = {</div>
+          <div class="code-line indent"><span class="c-k">name:</span> <span class="c-s">"Electron Studios"</span>,</div>
+          <div class="code-line indent"><span class="c-k">mission:</span> <span class="c-s">"Build & Innovate"</span>,</div>
+          <div class="code-line indent"><span class="c-k">stack:</span> [<span class="c-s">"Web"</span>, <span class="c-s">"App"</span>, <span class="c-s">"IoT"</span>],</div>
+          <div class="code-line indent"><span class="c-k">status:</span> <span class="c-g">"✓ Online"</span></div>
+          <div class="code-line">}</div>
+          <div class="code-cursor">█</div>
+        </div>
+        <div class="device-chip">
+          <div class="chip-pin" style="top:10px;left:-8px"></div>
+          <div class="chip-pin" style="top:25px;left:-8px"></div>
+          <div class="chip-pin" style="top:40px;left:-8px"></div>
+          <div class="chip-pin" style="top:10px;right:-8px"></div>
+          <div class="chip-pin" style="top:25px;right:-8px"></div>
+          <div class="chip-pin" style="top:40px;right:-8px"></div>
+          <span>μC</span>
+        </div>
+        <div class="floating-badge fb1">⚡ ESP32</div>
+        <div class="floating-badge fb2">🌐 React</div>
+        <div class="floating-badge fb3">📱 Flutter</div>
+        <div class="floating-badge fb4">🔧 Arduino</div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>Web Development</span><span class="ticker-dot">✦</span>
+      <span>Mobile Apps</span><span class="ticker-dot">✦</span>
+      <span>IoT Systems</span><span class="ticker-dot">✦</span>
+      <span>Embedded Electronics</span><span class="ticker-dot">✦</span>
+      <span>PCB Design</span><span class="ticker-dot">✦</span>
+      <span>UI/UX Design</span><span class="ticker-dot">✦</span>
+      <span>Arduino &amp; ESP32</span><span class="ticker-dot">✦</span>
+      <span>Cloud Integration</span><span class="ticker-dot">✦</span>
+      <span>Web Development</span><span class="ticker-dot">✦</span>
+      <span>Mobile Apps</span><span class="ticker-dot">✦</span>
+      <span>IoT Systems</span><span class="ticker-dot">✦</span>
+      <span>Embedded Electronics</span><span class="ticker-dot">✦</span>
+      <span>PCB Design</span><span class="ticker-dot">✦</span>
+      <span>UI/UX Design</span><span class="ticker-dot">✦</span>
+      <span>Arduino &amp; ESP32</span><span class="ticker-dot">✦</span>
+      <span>Cloud Integration</span><span class="ticker-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <section class="trust-strip">
+    <div class="container">
+      <p class="trust-label">Trusted technologies &amp; platforms we master</p>
+      <div class="trust-logos">
+        <div class="trust-logo-track">
+          <div class="trust-logo-item">⚛️ <span>React</span></div>
+          <div class="trust-logo-item">🔷 <span>Flutter</span></div>
+          <div class="trust-logo-item">🔥 <span>Firebase</span></div>
+          <div class="trust-logo-item">⚡ <span>ESP32</span></div>
+          <div class="trust-logo-item">🐍 <span>Python</span></div>
+          <div class="trust-logo-item">☁️ <span>AWS</span></div>
+          <div class="trust-logo-item">🔧 <span>Arduino</span></div>
+          <div class="trust-logo-item">▲ <span>Next.js</span></div>
+          <div class="trust-logo-item">🟢 <span>Node.js</span></div>
+          <div class="trust-logo-item">📡 <span>MQTT</span></div>
+          <div class="trust-logo-item">🗄️ <span>MongoDB</span></div>
+          <div class="trust-logo-item">🔌 <span>KiCad</span></div>
+          <!-- duplicate for seamless loop -->
+          <div class="trust-logo-item">⚛️ <span>React</span></div>
+          <div class="trust-logo-item">🔷 <span>Flutter</span></div>
+          <div class="trust-logo-item">🔥 <span>Firebase</span></div>
+          <div class="trust-logo-item">⚡ <span>ESP32</span></div>
+          <div class="trust-logo-item">🐍 <span>Python</span></div>
+          <div class="trust-logo-item">☁️ <span>AWS</span></div>
+          <div class="trust-logo-item">🔧 <span>Arduino</span></div>
+          <div class="trust-logo-item">▲ <span>Next.js</span></div>
+          <div class="trust-logo-item">🟢 <span>Node.js</span></div>
+          <div class="trust-logo-item">📡 <span>MQTT</span></div>
+          <div class="trust-logo-item">🗄️ <span>MongoDB</span></div>
+          <div class="trust-logo-item">🔌 <span>KiCad</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card-main reveal">
+            <div class="about-icon-ring">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="28" stroke="url(#aGrad)" stroke-width="2"/>
+                <path d="M20 30l7 7 13-14" stroke="url(#aGrad)" stroke-width="3" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="aGrad" x1="0" y1="0" x2="60" y2="60">
+                    <stop offset="0%" stop-color="#FF6B00"/>
+                    <stop offset="100%" stop-color="#FF8C38"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3>Client-First Philosophy</h3>
+            <p>We listen, understand, and execute. Every project is a new challenge we tackle with full dedication and technical mastery.</p>
+          </div>
+          <div class="about-card-secondary reveal delay-1">
+            <div class="about-tech-grid">
+              <div class="tech-pill">⚡ ESP32</div>
+              <div class="tech-pill">🌐 React</div>
+              <div class="tech-pill">📱 Flutter</div>
+              <div class="tech-pill">🐍 Python</div>
+              <div class="tech-pill">🔧 Arduino</div>
+              <div class="tech-pill">☁️ Firebase</div>
+              <div class="tech-pill">🗃️ Node.js</div>
+              <div class="tech-pill">🔌 MQTT</div>
+            </div>
+          </div>
+          <div class="about-glow"></div>
+        </div>
+        <div class="about-content">
+          <div class="section-tag reveal">About Us</div>
+          <h2 class="section-title reveal delay-1">
+            Where Electronics<br/>
+            <span class="gradient-text">Meets Software</span>
+          </h2>
+          <p class="about-desc reveal delay-2">
+            Electron Studios is a passionate startup born from the intersection of hardware ingenuity and software creativity. We partner with clients to bring bold ideas to life — from a sleek web platform to a fully custom IoT system.
+          </p>
+          <p class="about-desc reveal delay-3">
+            Whether you need a blazing-fast website, a polished mobile app, a custom embedded system, or a full-stack digital product — we've got the skills and the drive to deliver.
+          </p>
+          <div class="about-features">
+            <div class="feature-item reveal delay-2">
+              <div class="feature-icon">🚀</div>
+              <div>
+                <h4>Fast Delivery</h4>
+                <p>Agile methodology for rapid, quality delivery</p>
+              </div>
+            </div>
+            <div class="feature-item reveal delay-3">
+              <div class="feature-icon">🎯</div>
+              <div>
+                <h4>Tailored Solutions</h4>
+                <p>Custom-built exactly for your requirements</p>
+              </div>
+            </div>
+            <div class="feature-item reveal delay-4">
+              <div class="feature-icon">🔐</div>
+              <div>
+                <h4>Reliable & Secure</h4>
+                <p>Built with best security practices from day one</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">What We Build</div>
+        <h2 class="section-title reveal delay-1">Our <span class="gradient-text">Services</span></h2>
+        <p class="section-subtitle reveal delay-2">From concept to completion, we handle the full spectrum of digital and hardware development</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" id="serviceWeb">
+          <div class="service-number">01</div>
+          <div class="service-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="2" y="6" width="32" height="24" rx="3" stroke="url(#sGrad1)" stroke-width="2"/>
+              <path d="M2 12h32" stroke="url(#sGrad1)" stroke-width="2"/>
+              <circle cx="7" cy="9" r="1.5" fill="#FF6B00"/>
+              <circle cx="12" cy="9" r="1.5" fill="#FF8C38"/>
+              <circle cx="17" cy="9" r="1.5" fill="#FFBA7A"/>
+              <path d="M10 20l4-4 4 4 6-6" stroke="url(#sGrad1)" stroke-width="2" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="sGrad1" x1="0" y1="0" x2="36" y2="36">
+                  <stop offset="0%" stop-color="#FF6B00"/>
+                  <stop offset="100%" stop-color="#FF8C38"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>High-performance, visually stunning websites and web apps. From landing pages to full SaaS platforms — we craft digital experiences that convert.</p>
+          <ul class="service-list">
+            <li>Custom HTML/CSS/JS Websites</li>
+            <li>React / Next.js Applications</li>
+            <li>Admin Dashboards</li>
+            <li>E-Commerce Platforms</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-1" id="serviceMobile">
+          <div class="service-number">02</div>
+          <div class="service-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="9" y="2" width="18" height="32" rx="4" stroke="url(#sGrad2)" stroke-width="2"/>
+              <circle cx="18" cy="30" r="1.5" fill="url(#sGrad2)"/>
+              <path d="M14 8h8M14 13h5" stroke="url(#sGrad2)" stroke-width="2" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="sGrad2" x1="0" y1="0" x2="36" y2="36">
+                  <stop offset="0%" stop-color="#FF8C38"/>
+                  <stop offset="100%" stop-color="#FFBA7A"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Mobile Apps</h3>
+          <p>Beautiful, feature-rich mobile apps for Android and iOS. Built with Flutter or React Native for seamless cross-platform experiences.</p>
+          <ul class="service-list">
+            <li>Flutter / React Native Apps</li>
+            <li>Firebase Integration</li>
+            <li>Bluetooth & IoT Control Apps</li>
+            <li>Real-time Data Apps</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-2" id="serviceIoT">
+          <div class="service-number">03</div>
+          <div class="service-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="6" stroke="url(#sGrad3)" stroke-width="2"/>
+              <circle cx="6" cy="8" r="3" stroke="url(#sGrad3)" stroke-width="1.5"/>
+              <circle cx="30" cy="8" r="3" stroke="url(#sGrad3)" stroke-width="1.5"/>
+              <circle cx="6" cy="28" r="3" stroke="url(#sGrad3)" stroke-width="1.5"/>
+              <circle cx="30" cy="28" r="3" stroke="url(#sGrad3)" stroke-width="1.5"/>
+              <path d="M9 10l6 5M21 10l6-2M9 27l6-5M21 27l6 1" stroke="url(#sGrad3)" stroke-width="1.5" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="sGrad3" x1="0" y1="0" x2="36" y2="36">
+                  <stop offset="0%" stop-color="#FF6B00"/>
+                  <stop offset="100%" stop-color="#E55A00"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>IoT Systems</h3>
+          <p>Connected device ecosystems that bridge the physical and digital worlds. Smart automation, remote monitoring, and cloud-connected hardware.</p>
+          <ul class="service-list">
+            <li>ESP32 / Arduino Projects</li>
+            <li>MQTT & Cloud Dashboards</li>
+            <li>Smart Home Automation</li>
+            <li>Sensor Networks</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-1" id="serviceEmbedded">
+          <div class="service-number">04</div>
+          <div class="service-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <rect x="8" y="8" width="20" height="20" rx="2" stroke="url(#sGrad4)" stroke-width="2"/>
+              <rect x="13" y="13" width="10" height="10" rx="1" fill="url(#sGrad4)" opacity="0.4"/>
+              <path d="M13 4v4M18 4v4M23 4v4M13 28v4M18 28v4M23 28v4M4 13h4M4 18h4M4 23h4M28 13h4M28 18h4M28 23h4" stroke="url(#sGrad4)" stroke-width="2" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="sGrad4" x1="0" y1="0" x2="36" y2="36">
+                  <stop offset="0%" stop-color="#FFBA7A"/>
+                  <stop offset="100%" stop-color="#FF6B00"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Embedded Electronics</h3>
+          <p>Custom hardware design from concept to prototype. Microcontroller programming, PCB design, and firmware development for specialized applications.</p>
+          <ul class="service-list">
+            <li>PCB Schematic & Layout</li>
+            <li>Firmware Development (C/C++)</li>
+            <li>Prototype to Production</li>
+            <li>Sensor & Actuator Integration</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-2" id="serviceUI">
+          <div class="service-number">05</div>
+          <div class="service-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="10" stroke="url(#sGrad5)" stroke-width="2"/>
+              <path d="M18 10v8l5 3" stroke="url(#sGrad5)" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="18" cy="4" r="2" fill="url(#sGrad5)"/>
+              <circle cx="32" cy="18" r="2" fill="url(#sGrad5)"/>
+              <circle cx="18" cy="32" r="2" fill="url(#sGrad5)"/>
+              <circle cx="4" cy="18" r="2" fill="url(#sGrad5)"/>
+              <defs>
+                <linearGradient id="sGrad5" x1="0" y1="0" x2="36" y2="36">
+                  <stop offset="0%" stop-color="#FF8C38"/>
+                  <stop offset="100%" stop-color="#FF6B00"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Stunning interfaces that are as beautiful as they are functional. User-centered design that drives engagement and delivers seamless experiences.</p>
+          <ul class="service-list">
+            <li>Wireframing & Prototyping</li>
+            <li>Brand Identity Design</li>
+            <li>Interactive UI Systems</li>
+            <li>Design-to-Code Handoff</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-card reveal delay-3" id="serviceCloud">
+          <div class="service-number">06</div>
+          <div class="service-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M28 22a6 6 0 10-3.5-10.8A8 8 0 1010.5 22" stroke="url(#sGrad6)" stroke-width="2" stroke-linecap="round"/>
+              <path d="M14 28v-8M18 28v-8M22 28v-8M11 28h14" stroke="url(#sGrad6)" stroke-width="2" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="sGrad6" x1="0" y1="0" x2="36" y2="36">
+                  <stop offset="0%" stop-color="#E55A00"/>
+                  <stop offset="100%" stop-color="#FF8C38"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Cloud & Backend</h3>
+          <p>Scalable backend systems, APIs, and cloud infrastructure. Real-time databases, authentication, and serverless solutions that grow with your business.</p>
+          <ul class="service-list">
+            <li>REST API Development</li>
+            <li>Firebase / Supabase</li>
+            <li>Real-time Databases</li>
+            <li>Authentication Systems</li>
+          </ul>
+          <div class="service-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Our Work</div>
+        <h2 class="section-title reveal delay-1"><span class="gradient-text">Projects</span> We're Proud of</h2>
+        <p class="section-subtitle reveal delay-2">A glimpse into the products and systems we've built for our clients</p>
+      </div>
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all" id="filterAll">All</button>
+        <button class="filter-btn" data-filter="web" id="filterWeb">Web</button>
+        <button class="filter-btn" data-filter="app" id="filterApp">Mobile</button>
+        <button class="filter-btn" data-filter="iot" id="filterIoT">IoT</button>
+        <button class="filter-btn" data-filter="electronics" id="filterElectronics">Electronics</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item reveal" data-category="web" id="portItem1">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #FF6B00, #FF8C38)">
+            <div class="port-overlay">
+              <span class="port-tag">Web Development</span>
+              <h3>SaaS Dashboard Platform</h3>
+              <p>Full-stack analytics dashboard with real-time data visualization</p>
+              <div class="port-tech"><span>React</span><span>Node.js</span><span>Firebase</span></div>
+            </div>
+            <div class="port-icon">📊</div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal delay-1" data-category="iot" id="portItem2">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #E55A00, #FF6B00)">
+            <div class="port-overlay">
+              <span class="port-tag">IoT System</span>
+              <h3>Smart Home Controller</h3>
+              <p>ESP32-based home automation with mobile app and voice control</p>
+              <div class="port-tech"><span>ESP32</span><span>MQTT</span><span>Flutter</span></div>
+            </div>
+            <div class="port-icon">🏠</div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal delay-2" data-category="app" id="portItem3">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #FF8C38, #FFBA7A)">
+            <div class="port-overlay">
+              <span class="port-tag">Mobile App</span>
+              <h3>Attendance Management App</h3>
+              <p>Facial recognition based attendance system with cloud sync</p>
+              <div class="port-tech"><span>Flutter</span><span>Firebase</span><span>ML Kit</span></div>
+            </div>
+            <div class="port-icon">📱</div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal delay-1" data-category="electronics" id="portItem4">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #1A1A1A, #333333)">
+            <div class="port-overlay">
+              <span class="port-tag">Embedded Electronics</span>
+              <h3>Custom PCB Motor Driver</h3>
+              <p>4-channel motor driver board with PWM speed control</p>
+              <div class="port-tech"><span>PCB Design</span><span>C++</span><span>MOSFET</span></div>
+            </div>
+            <div class="port-icon">⚙️</div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal delay-2" data-category="web" id="portItem5">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #FF6B00, #E55A00)">
+            <div class="port-overlay">
+              <span class="port-tag">Web Development</span>
+              <h3>E-Commerce Platform</h3>
+              <p>Full-featured online store with payment gateway and inventory management</p>
+              <div class="port-tech"><span>Next.js</span><span>Stripe</span><span>MongoDB</span></div>
+            </div>
+            <div class="port-icon">🛒</div>
+          </div>
+        </div>
+        <div class="portfolio-item reveal delay-3" data-category="iot" id="portItem6">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #0A0A0A, #FF6B00)">
+            <div class="port-overlay">
+              <span class="port-tag">IoT + Robotics</span>
+              <h3>ESP32 RC Car Controller</h3>
+              <p>Web Bluetooth controlled robotic car with live camera feed</p>
+              <div class="port-tech"><span>ESP32-CAM</span><span>WebBT</span><span>JavaScript</span></div>
+            </div>
+            <div class="port-icon">🚗</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH STACK / SKILLS ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Our Expertise</div>
+        <h2 class="section-title reveal delay-1">Tech <span class="gradient-text">Stack</span> Mastery</h2>
+        <p class="section-subtitle reveal delay-2">From silicon to cloud — we're fluent across the full spectrum of modern technology</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-col reveal">
+          <h3 class="skills-category">⚡ Hardware & Embedded</h3>
+          <div class="skill-item">
+            <div class="skill-header"><span>ESP32 / Arduino</span><span class="skill-pct">95%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>PCB Design (KiCad)</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>C / C++ Firmware</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>MQTT / IoT Protocols</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+        </div>
+        <div class="skills-col reveal delay-1">
+          <h3 class="skills-category">🌐 Web & Mobile</h3>
+          <div class="skill-item">
+            <div class="skill-header"><span>React / Next.js</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Flutter (Android & iOS)</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>Node.js / Firebase</span><span class="skill-pct">87%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span>UI/UX Design (Figma)</span><span class="skill-pct">83%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="83"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">How We Work</div>
+        <h2 class="section-title reveal delay-1">Our <span class="gradient-text">Process</span></h2>
+        <p class="section-subtitle reveal delay-2">A streamlined workflow that ensures your project is delivered on time, on budget, and beyond expectations</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step reveal" id="step1">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-icon">💬</div>
+            <h3>Discovery Call</h3>
+            <p>We start with a free consultation to deeply understand your idea, requirements, budget, and timelines. No commitments, just clarity.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal delay-1" id="step2">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-icon">📋</div>
+            <h3>Planning & Proposal</h3>
+            <p>We create a detailed project roadmap with milestones, tech stack selection, design direction, and a transparent pricing breakdown.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal delay-2" id="step3">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-icon">🎨</div>
+            <h3>Design & Prototype</h3>
+            <p>We build wireframes, UI mockups, or hardware schematics so you can see exactly what you're getting before a single line of code is written.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal delay-3" id="step4">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-icon">⚡</div>
+            <h3>Build & Iterate</h3>
+            <p>Our team gets to work with weekly updates and live previews. You stay in the loop and can provide feedback at every stage.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal delay-4" id="step5">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-icon">🚀</div>
+            <h3>Launch & Support</h3>
+            <p>We handle deployment, testing, and launch. Post-launch support and maintenance are included — we don't abandon you after delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why-us section" id="whyus">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Why Us?</div>
+        <h2 class="section-title reveal delay-1">Electron Studios <span class="gradient-text">vs. The Rest</span></h2>
+        <p class="section-subtitle reveal delay-2">See how we stack up against generic freelancers and big-agency bureaucracy</p>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-col why-col-header">
+          <div class="why-feature-label"></div>
+          <div class="why-header-card why-us-header">
+            <div class="why-logo-small">⚡</div>
+            <span>Electron Studios</span>
+          </div>
+          <div class="why-header-card why-other-header">🏢 <span>Generic Agency</span></div>
+          <div class="why-header-card why-freelancer-header">👤 <span>Random Freelancer</span></div>
+        </div>
+        <div class="why-row reveal delay-1">
+          <div class="why-feature-label">Full-Stack + Hardware</div>
+          <div class="why-cell why-yes"><span class="why-icon">✓</span>One-stop shop</div>
+          <div class="why-cell why-partial"><span class="why-icon">~</span>Software only</div>
+          <div class="why-cell why-no"><span class="why-icon">✗</span>Often one skill</div>
+        </div>
+        <div class="why-row reveal delay-2">
+          <div class="why-feature-label">Transparent Pricing</div>
+          <div class="why-cell why-yes"><span class="why-icon">✓</span>Upfront quotes</div>
+          <div class="why-cell why-no"><span class="why-icon">✗</span>Hidden fees</div>
+          <div class="why-cell why-partial"><span class="why-icon">~</span>Varies wildly</div>
+        </div>
+        <div class="why-row reveal delay-1">
+          <div class="why-feature-label">Post-launch Support</div>
+          <div class="why-cell why-yes"><span class="why-icon">✓</span>30–90 days free</div>
+          <div class="why-cell why-partial"><span class="why-icon">~</span>Paid support only</div>
+          <div class="why-cell why-no"><span class="why-icon">✗</span>Rarely included</div>
+        </div>
+        <div class="why-row reveal delay-2">
+          <div class="why-feature-label">Source Code Ownership</div>
+          <div class="why-cell why-yes"><span class="why-icon">✓</span>Full IP transfer</div>
+          <div class="why-cell why-partial"><span class="why-icon">~</span>License-based</div>
+          <div class="why-cell why-yes"><span class="why-icon">✓</span>Usually yes</div>
+        </div>
+        <div class="why-row reveal delay-1">
+          <div class="why-feature-label">Delivery Speed</div>
+          <div class="why-cell why-yes"><span class="why-icon">✓</span>Agile, fast</div>
+          <div class="why-cell why-no"><span class="why-icon">✗</span>Slow cycles</div>
+          <div class="why-cell why-partial"><span class="why-icon">~</span>Inconsistent</div>
+        </div>
+        <div class="why-row reveal delay-2">
+          <div class="why-feature-label">IoT / PCB Design</div>
+          <div class="why-cell why-yes"><span class="why-icon">✓</span>In-house experts</div>
+          <div class="why-cell why-no"><span class="why-icon">✗</span>Not available</div>
+          <div class="why-cell why-no"><span class="why-icon">✗</span>Rarely</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Client Love</div>
+        <h2 class="section-title reveal delay-1">What Our <span class="gradient-text">Clients Say</span></h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal" id="testi1">
+          <span class="quote-icon">&ldquo;</span>
+          <div class="testi-stars"><span>★★★★★</span></div>
+          <p>"Electron Studios delivered our IoT dashboard in 3 weeks — faster than any agency we've worked with. The quality was exceptional and they were super responsive throughout."</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-av1">RA</div>
+            <div>
+              <strong>Rahul A.</strong>
+              <span>Tech Startup Founder</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-1" id="testi2">
+          <span class="quote-icon">&ldquo;</span>
+          <div class="testi-stars"><span>★★★★★</span></div>
+          <p>"They built our attendance app from scratch in just a month. The facial recognition works flawlessly and the UI is gorgeous. Highly recommend for mobile development!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-av2">PK</div>
+            <div>
+              <strong>Priya K.</strong>
+              <span>College Administrator</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal delay-2" id="testi3">
+          <span class="quote-icon">&ldquo;</span>
+          <div class="testi-stars"><span>★★★★★</span></div>
+          <p>"Our custom PCB motor driver works perfectly. They handled the entire design, prototyping, and code. True experts who know both hardware and software deeply."</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-av3">SM</div>
+            <div>
+              <strong>Sanjay M.</strong>
+              <span>Robotics Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">The People</div>
+        <h2 class="section-title reveal delay-1">Meet the <span class="gradient-text">Team</span></h2>
+        <p class="section-subtitle reveal delay-2">A small, passionate crew obsessed with making great tech products</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal" id="team1">
+          <div class="team-avatar ta1">
+            <span>PV</span>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <h3>Pradeep Vasala</h3>
+            <span class="team-role">Founder &amp; Full-Stack Dev</span>
+            <p>Builds scalable web apps and IoT systems. Loves React, Node.js, and weekend hardware hacks.</p>
+            <div class="team-skills">
+              <span>React</span><span>Node.js</span><span>ESP32</span>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal delay-1" id="team2">
+          <div class="team-avatar ta2">
+            <span>DP</span>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <h3>G Durga Prasad</h3>
+            <span class="team-role">Hardware Engineer</span>
+            <p>PCB design virtuoso and embedded systems architect. Turns circuit ideas into manufacturable products.</p>
+            <div class="team-skills">
+              <span>KiCad</span><span>C/C++</span><span>MQTT</span>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal delay-2" id="team3">
+          <div class="team-avatar ta3">
+            <span>DS</span>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <h3>D Ujwala Sreya</h3>
+            <span class="team-role">UI/UX &amp; Mobile Dev</span>
+            <p>Designs first, codes second. Crafts gorgeous Flutter apps and pixel-perfect design systems.</p>
+            <div class="team-skills">
+              <span>Flutter</span><span>Figma</span><span>Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Transparent Pricing</div>
+        <h2 class="section-title reveal delay-1">Simple, <span class="gradient-text">Honest</span> Plans</h2>
+        <p class="section-subtitle reveal delay-2">Flexible pricing tailored to your project size. No hidden fees, no surprises.</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card reveal" id="pricingStarter">
+          <div class="pricing-badge-top">Starter</div>
+          <div class="pricing-icon">🌱</div>
+          <div class="pricing-price"><span class="price-currency">₹</span>5,000<span class="price-period">+</span></div>
+          <p class="pricing-desc">Perfect for small projects, landing pages, and basic IoT prototypes.</p>
+          <ul class="pricing-features">
+            <li><span class="pf-check">✓</span> Single-page website or landing page</li>
+            <li><span class="pf-check">✓</span> Basic Arduino / ESP8266 project</li>
+            <li><span class="pf-check">✓</span> Mobile-responsive design</li>
+            <li><span class="pf-check">✓</span> 7-day delivery</li>
+            <li><span class="pf-check">✓</span> 1 revision round</li>
+            <li class="pf-no"><span class="pf-cross">✗</span> Backend / Database</li>
+            <li class="pf-no"><span class="pf-cross">✗</span> Mobile app</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost pricing-btn">Get Started</a>
+        </div>
+        <!-- Pro (Popular) -->
+        <div class="pricing-card pricing-popular reveal delay-1" id="pricingPro">
+          <div class="pricing-badge-popular">Most Popular ⚡</div>
+          <div class="pricing-icon">🚀</div>
+          <div class="pricing-price"><span class="price-currency">₹</span>25,000<span class="price-period">+</span></div>
+          <p class="pricing-desc">Full-featured web apps, mobile apps, or complete IoT systems with cloud connectivity.</p>
+          <ul class="pricing-features">
+            <li><span class="pf-check">✓</span> Multi-page web app or dashboard</li>
+            <li><span class="pf-check">✓</span> ESP32 + Mobile app control</li>
+            <li><span class="pf-check">✓</span> Firebase / Supabase backend</li>
+            <li><span class="pf-check">✓</span> 3–4 week delivery</li>
+            <li><span class="pf-check">✓</span> 3 revision rounds</li>
+            <li><span class="pf-check">✓</span> Post-launch support (30 days)</li>
+            <li><span class="pf-check">✓</span> Source code delivery</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary pricing-btn">Start Project</a>
+        </div>
+        <!-- Enterprise -->
+        <div class="pricing-card reveal delay-2" id="pricingEnterprise">
+          <div class="pricing-badge-top">Enterprise</div>
+          <div class="pricing-icon">🏢</div>
+          <div class="pricing-price"><span class="price-currency">₹</span>75,000<span class="price-period">+</span></div>
+          <p class="pricing-desc">Large-scale digital products, custom hardware + software integration, SaaS platforms.</p>
+          <ul class="pricing-features">
+            <li><span class="pf-check">✓</span> Full-stack SaaS platform</li>
+            <li><span class="pf-check">✓</span> Custom PCB + firmware + app</li>
+            <li><span class="pf-check">✓</span> Advanced cloud infrastructure</li>
+            <li><span class="pf-check">✓</span> Dedicated project manager</li>
+            <li><span class="pf-check">✓</span> Unlimited revisions</li>
+            <li><span class="pf-check">✓</span> 90-day post-launch support</li>
+            <li><span class="pf-check">✓</span> NDA + IP ownership transfer</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost pricing-btn">Let's Talk</a>
+        </div>
+      </div>
+      <p class="pricing-note reveal">💡 All prices are starting points. Final quote depends on project scope. <a href="#contact">Get a free estimate →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Got Questions?</div>
+        <h2 class="section-title reveal delay-1">Frequently <span class="gradient-text">Asked</span></h2>
+        <p class="section-subtitle reveal delay-2">Everything you need to know before we start working together</p>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item reveal" id="faq1">
+          <button class="faq-question" aria-expanded="false">
+            <span>How long does a typical project take?</span>
+            <div class="faq-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          </button>
+          <div class="faq-answer">
+            <p>It depends on the scope. A simple landing page takes 3–7 days. A full web app or IoT system typically takes 3–6 weeks. We always provide a detailed timeline in our proposal before starting.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal delay-1" id="faq2">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you work with international clients?</span>
+            <div class="faq-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We're a remote-first team based in India and work with clients globally. We accept international payments and can schedule calls across time zones.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal delay-2" id="faq3">
+          <button class="faq-question" aria-expanded="false">
+            <span>What happens after the project is delivered?</span>
+            <div class="faq-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          </button>
+          <div class="faq-answer">
+            <p>We provide post-launch support based on your plan. All clients get at least 30 days of bug-fix support. We also offer ongoing maintenance contracts for long-term partnerships.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal delay-1" id="faq4">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I get the full source code and ownership?</span>
+            <div class="faq-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Once the project is paid in full, all source code, design files, and IP belong to you. We hand over everything via GitHub and provide full documentation.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal delay-2" id="faq5">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you take advance payment?</span>
+            <div class="faq-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          </button>
+          <div class="faq-answer">
+            <p>We usually work with a 50% upfront and 50% on delivery model. For larger projects, we use milestone-based payments to keep things transparent and low-risk for both sides.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal delay-3" id="faq6">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can you build both hardware AND the software app together?</span>
+            <div class="faq-arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — that's our superpower! We're one of the few studios that handles PCB design, firmware, mobile app, web dashboard, and cloud backend all under one roof. No need to coordinate multiple vendors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ESTIMATOR ===== -->
+  <section class="estimator section" id="estimator">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Instant Estimate</div>
+        <h2 class="section-title reveal delay-1">What Will Your <span class="gradient-text">Project Cost?</span></h2>
+        <p class="section-subtitle reveal delay-2">Answer 4 quick questions and get a rough budget range instantly — no email required</p>
+      </div>
+      <div class="estimator-card reveal">
+        <div class="estimator-steps">
+          <!-- Step 1 -->
+          <div class="est-step active" data-step="1">
+            <div class="est-step-header">
+              <span class="est-step-num">01</span>
+              <h4>What type of project?</h4>
+            </div>
+            <div class="est-options" id="estType">
+              <button class="est-opt" data-value="web" data-cost="8000">🌐 Website / Web App</button>
+              <button class="est-opt" data-value="mobile" data-cost="15000">📱 Mobile App</button>
+              <button class="est-opt" data-value="iot" data-cost="20000">⚡ IoT System</button>
+              <button class="est-opt" data-value="embedded" data-cost="25000">🔌 Embedded / PCB</button>
+              <button class="est-opt" data-value="fullstack" data-cost="40000">🚀 Full-Stack + Hardware</button>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="est-step" data-step="2">
+            <div class="est-step-header">
+              <span class="est-step-num">02</span>
+              <h4>Project complexity?</h4>
+            </div>
+            <div class="est-options" id="estComplexity">
+              <button class="est-opt" data-value="simple" data-mult="1.0">🟢 Simple — Basic features, standard UI</button>
+              <button class="est-opt" data-value="medium" data-mult="1.8">🟡 Medium — Custom design, 5–10 features</button>
+              <button class="est-opt" data-value="complex" data-mult="3.0">🔴 Complex — AI, real-time, hardware integration</button>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="est-step" data-step="3">
+            <div class="est-step-header">
+              <span class="est-step-num">03</span>
+              <h4>Timeline needed?</h4>
+            </div>
+            <div class="est-options" id="estTimeline">
+              <button class="est-opt" data-value="rush" data-mult="1.5">⚡ Rush — Under 2 weeks</button>
+              <button class="est-opt" data-value="normal" data-mult="1.0">📅 Normal — 1–2 months</button>
+              <button class="est-opt" data-value="relaxed" data-mult="0.85">🌿 Relaxed — 3+ months</button>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="est-step" data-step="4">
+            <div class="est-step-header">
+              <span class="est-step-num">04</span>
+              <h4>Any add-ons?</h4>
+            </div>
+            <div class="est-options est-options-multi" id="estAddons">
+              <button class="est-opt" data-value="admin" data-add="5000">📊 Admin Dashboard</button>
+              <button class="est-opt" data-value="cloud" data-add="4000">☁️ Cloud Hosting Setup</button>
+              <button class="est-opt" data-value="maintenance" data-add="3000">🔧 3-Month Maintenance</button>
+              <button class="est-opt" data-value="branding" data-add="4500">🎨 Logo &amp; Branding</button>
+              <button class="est-opt" data-value="none" data-add="0">❌ None</button>
+            </div>
+          </div>
+        </div>
+        <!-- Result -->
+        <div class="estimator-result" id="estimatorResult">
+          <div class="est-result-icon">⚡</div>
+          <h3>Your Estimated Budget</h3>
+          <div class="est-range" id="estRange">₹0 – ₹0</div>
+          <p class="est-note">This is a rough estimate. Final quote depends on detailed requirements.</p>
+          <div class="est-actions">
+            <a href="#contact" class="btn btn-primary" id="estContactBtn">
+              <span>Get Exact Quote</span>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <button class="btn btn-ghost" id="estRestartBtn">Start Over</button>
+          </div>
+        </div>
+        <!-- Progress Nav -->
+        <div class="est-nav">
+          <button class="est-prev" id="estPrev" disabled>← Back</button>
+          <div class="est-dots" id="estDots">
+            <div class="est-dot active"></div>
+            <div class="est-dot"></div>
+            <div class="est-dot"></div>
+            <div class="est-dot"></div>
+          </div>
+          <button class="est-next btn btn-primary" id="estNext" disabled>
+            <span>Next</span>
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-orb cta-orb1"></div>
+    <div class="cta-orb cta-orb2"></div>
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2>Got a Project Idea?</h2>
+        <p>Let's turn your vision into reality. Tell us what you're building and we'll make it happen.</p>
+        <a href="#contact" class="btn btn-primary btn-large" id="ctaStartNow">
+          <span>Start Now — It's Free to Talk</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Get In Touch</div>
+        <h2 class="section-title reveal delay-1">Let's Build <span class="gradient-text">Together</span></h2>
+        <p class="section-subtitle reveal delay-2">Fill out the form and we'll get back to you within 24 hours with a free consultation</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-detail reveal" id="contactEmail">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email Us</h4>
+              <p>hr@electronstudios.online</p>
+            </div>
+          </div>
+          <div class="contact-detail reveal delay-1" id="contactPhone">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Call / WhatsApp</h4>
+              <p>+91 8074605658</p>
+            </div>
+          </div>
+          <div class="contact-detail reveal delay-2" id="contactLocation">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>India (Remote-first, serves globally)</p>
+            </div>
+          </div>
+          <div class="social-links reveal delay-3">
+            <a href="#" class="social-btn" id="socialGithub" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="socialLinkedin" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="socialInstagram" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal delay-1" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nameInput">Your Name</label>
+              <input type="text" id="nameInput" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Email Address</label>
+              <input type="email" id="emailInput" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phoneInput">Mobile Number</label>
+            <input type="tel" id="phoneInput" placeholder="+91 98765 43210" required />
+          </div>
+          <div class="form-group">
+            <label for="serviceSelect">Service Needed</label>
+            <select id="serviceSelect">
+              <option value="">— Select a Service —</option>
+              <option value="web">Web Development</option>
+              <option value="mobile">Mobile App</option>
+              <option value="iot">IoT System</option>
+              <option value="embedded">Embedded Electronics</option>
+              <option value="design">UI/UX Design</option>
+              <option value="cloud">Cloud & Backend</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budgetSelect">Approximate Budget</label>
+            <select id="budgetSelect">
+              <option value="">— Select Budget Range —</option>
+              <option value="small">Under ₹10,000</option>
+              <option value="medium">₹10,000 – ₹50,000</option>
+              <option value="large">₹50,000 – ₹1,00,000</option>
+              <option value="enterprise">₹1,00,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="messageInput">Tell Us About Your Project</label>
+            <textarea id="messageInput" rows="5" placeholder="Describe your idea, goals, and any specific requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="formSubmit">
+            <span>Send Message</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 10l16-8-7 8 7 8-16-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <span>✅</span>
+            <p>Message sent! We'll be in touch within 24 hours.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="newsletter-text">
+          <h3>Stay in the Loop 📡</h3>
+          <p>Get updates on new projects, tech insights, and exclusive early-bird offers — no spam, ever.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="newsletter-input-wrap">
+            <input type="email" id="newsletterEmail" placeholder="your@email.com" required />
+            <button type="submit" class="btn btn-primary" id="newsletterSubmit">
+              <span>Subscribe</span>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M2 10l16-8-7 8 7 8-16-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <div class="logo-icon">
+              <img src="logo.jpg" alt="Electron Studios Logo" class="logo-img" />
+            </div>
+            <span>Electron <strong>Studios</strong></span>
+          </a>
+          <p>A startup at the intersection of electronics and software. Building the digital future, one project at a time.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Mobile Apps</a></li>
+            <li><a href="#services">IoT Systems</a></li>
+            <li><a href="#services">Embedded Electronics</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hr@electronstudios.online">hr@electronstudios.online</a></li>
+            <li><a href="tel:+918074605658">+91 8074605658</a></li>
+            <li><span>India (Remote-first)</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Electron Studios. All rights reserved. Built with ⚡ and ❤️</p>
+        <p>Proudly made in India 🇮🇳</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918074605658?text=Hi%20Electron%20Studios!%20I%20have%20a%20project%20idea." 
+     class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+     style="display:none">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- ===== SPEED DIAL ===== -->
+  <div class="speed-dial" id="speedDial">
+    <div class="speed-dial-menu" id="speedDialMenu">
+      <a href="https://wa.me/918074605658?text=Hi!" target="_blank" rel="noopener" class="sd-item sd-whatsapp" aria-label="WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="sd-label">WhatsApp</span>
+      </a>
+      <a href="tel:+918074605658" class="sd-item sd-phone" aria-label="Call us">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .13h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="sd-label">Call Us</span>
+      </a>
+      <a href="mailto:hr@electronstudios.online" class="sd-item sd-email" aria-label="Email us">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round"/></svg>
+        <span class="sd-label">Email</span>
+      </a>
+      <button class="sd-item sd-quote" id="sdQuoteBtn" aria-label="Quick Quote">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="sd-label">Quick Quote</span>
+      </button>
+    </div>
+    <button class="sd-trigger" id="sdTrigger" aria-label="Contact options">
+      <svg class="sd-icon-main" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="sd-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <!-- ===== PORTFOLIO LIGHTBOX ===== -->
+  <div class="lightbox" id="portfolioLightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-modal">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <div class="lightbox-preview" id="lightboxPreview">
+        <div class="lightbox-icon" id="lightboxIcon"></div>
+      </div>
+      <div class="lightbox-body">
+        <span class="lightbox-tag" id="lightboxTag"></span>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+        <div class="lightbox-tech" id="lightboxTech"></div>
+        <div class="lightbox-actions">
+          <a href="#contact" class="btn btn-primary" id="lightboxCta" onclick="document.getElementById('portfolioLightbox').classList.remove('open')">
+            <span>Start Similar Project</span>
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SOCIAL PROOF POPUP ===== -->
+  <div class="social-proof-popup" id="socialProofPopup">
+    <div class="spp-avatar" id="sppAvatar"></div>
+    <div class="spp-body">
+      <strong id="sppName"></strong>
+      <p id="sppText"></p>
+      <span class="spp-time" id="sppTime"></span>
+    </div>
+    <button class="spp-close" id="sppClose">&times;</button>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- ===== TOAST CONTAINER ===== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ===== COOKIE CONSENT ===== -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <span class="cookie-icon">🍪</span>
+        <div>
+          <strong>We use cookies</strong>
+          <p>We use cookies to enhance your experience and analyze site traffic. By clicking "Accept", you agree to our use of cookies.</p>
+        </div>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn-cookie-decline" id="cookieDecline">Decline</button>
+        <button class="btn-cookie-accept" id="cookieAccept">Accept All</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== QUICK QUOTE PANEL ===== -->
+  <button class="quick-quote-trigger" id="quickQuoteTrigger" aria-label="Quick Quote">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Quick Quote</span>
+  </button>
+
+  <div class="quick-quote-panel" id="quickQuotePanel">
+    <div class="qqp-header">
+      <div>
+        <h4>⚡ Quick Quote</h4>
+        <p>Tell us your idea in 30 seconds</p>
+      </div>
+      <button class="qqp-close" id="quickQuoteClose" aria-label="Close">&times;</button>
+    </div>
+    <form class="qqp-form" id="quickQuoteForm">
+      <input type="text" id="qqName" placeholder="Your name" required />
+      <input type="tel" id="qqPhone" placeholder="+91 98765 43210" required />
+      <select id="qqService">
+        <option value="">— Service needed —</option>
+        <option value="web">Web Development</option>
+        <option value="mobile">Mobile App</option>
+        <option value="iot">IoT System</option>
+        <option value="embedded">Embedded Electronics</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea id="qqMessage" rows="3" placeholder="Brief idea or requirement..."></textarea>
+      <button type="submit" class="btn btn-primary btn-full" id="qqSubmit">
+        <span>Send Quick Quote</span>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M2 10l16-8-7 8 7 8-16-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+  <div class="qqp-overlay" id="qqpOverlay"></div>
+
+  <script src="script.js"></script>
+  <script src="features.js"></script>
+  <script src="extras.js"></script>
+</body>
+</html>
+
